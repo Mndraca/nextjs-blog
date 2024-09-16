@@ -16,6 +16,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/comps/header.tsx", ".next/comps/navlink.tsx", ".next/comps/menuoverlay.tsx",".next/comps/about.tsx" ],
   "exclude": ["node_modules"]
 }
