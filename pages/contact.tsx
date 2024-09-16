@@ -150,7 +150,7 @@ const Contact: FC = () => {
                 placeholder="Enter your message"
                 handleChange={handleChangeMessage}
               />
-              <Button name="Submit" handleClick={handleSubmit} />
+              <Button handleClick={handleSubmit} />
             </div>
           </form>
         )}
