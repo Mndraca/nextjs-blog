@@ -1,8 +1,15 @@
+"use client";
+
 import React, { useEffect } from "react";
 
 declare global {
+  interface Calendly {
+    initPopupWidget(options: { url: string }): void;
+    closePopupWidget(): void;
+  }
+
   interface Window {
-    Calendly: any;
+    Calendly: Calendly | undefined; // Calendly might not be loaded immediately, so it's optional.
   }
 }
 
@@ -36,11 +43,11 @@ const BookingCalendar: React.FC = () => {
   };
 
   return (
-    <div className=" p-4 mb-4 mt-4 font-bold">
+    <div className="p-4 mb-4 mt-4 font-bold">
       <h3 style={{ paddingBottom: "15px" }}>To schedule your meeting press </h3>
       <button
         onClick={openCalendlyPopup}
-        className="border-2 border-pink-100 p-8 rounded-lg  bg-gradient-to-br from-rose-300 via-rose-400 to-rose-300 rounded text-white font-bold py-1 px-4  shadow hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        className="border-2 border-pink-100 p-8 rounded-lg bg-gradient-to-br from-rose-300 via-rose-400 to-rose-300 rounded text-white font-bold py-1 px-4 shadow hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
         aria-label="here"
       >
         here

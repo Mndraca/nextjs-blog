@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ChangeEvent, FC, useState } from "react";
 import Input from "./input";
 import Button from "./button";
@@ -90,7 +92,9 @@ const Contact: FC = () => {
         style={{ backgroundImage: "linear-gradient(pink, white, pink)" }}
       >
         <div>
-          <h5 className="text-xl font-bold text-black my-2">Let's Connect.</h5>
+          <h5 className="text-xl font-bold text-black my-2">
+            Let&apos;s Connect.
+          </h5>
           <div>
             <BookingCalendar />
           </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FC } from "react";
 
 interface ButtonProps {
@@ -5,7 +7,7 @@ interface ButtonProps {
   handleClick: (event: React.FormEvent) => void;
 }
 
-const Button = ({ name, handleClick }: ButtonProps) => {
+const Button: FC<ButtonProps> = ({ name, handleClick }) => {
   const upperCapB = (name: string) => {
     return name.slice(0, 1).toUpperCase() + name.slice(1);
   };

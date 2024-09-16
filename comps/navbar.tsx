@@ -1,3 +1,5 @@
+"use client";
+
 import { FC, useState } from "react";
 import Navlink from "./navlink";
 import MenuOverlay from "./menuoverlay";
